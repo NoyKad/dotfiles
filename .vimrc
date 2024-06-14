@@ -1,21 +1,24 @@
-"color desert
+if &shell =~# 'fish$'
+    set shell=sh
+endif
+
 set relativenumber
 set termguicolors
-"syntax on
 
+syntax enable
 filetype plugin indent on
+
 set tabstop=4
 set shiftwidth=4
 
 set wildmenu
 set hidden
 
-
-" set cursorline
 function InitLspPlugins()
 	call plug#begin('~/vimplugins')
 
 	Plug 'airblade/vim-gitgutter'
+	Plug 'khaveesh/vim-fish-syntax'
 	Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 	Plug 'mattn/vim-lsp-settings'
 	Plug 'vim-airline/vim-airline-themes'
